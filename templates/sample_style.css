@@ -1,0 +1,34 @@
+body {
+background: #cbd5db;
+color: #333333;
+margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-align: center;
+font-color: red;
+font-family: "Ariel Black";
+border: 2px solid goldenrod;
+border-radius: 20px;
+margin-top: 100px;
+padding: 20px;
+}
+
+p {
+color: green;
+background-color: steelblue;
+text-align: center;
+font-size: 30px;
+}
+#user {
+background-color: red;
+}
+img {
+size-width: 300;
+}
+.green {
+background-color: green;
+}
+.big {
+font-size: 40px;
+}

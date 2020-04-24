@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% for user in users %}
+        <strong>
+        <p class="user-name">{{ user.first_name }}</p>
+        <p class="user-name">{{ user.last_name }}</p>
+        </strong>
+            {% if user.email %}
+            <p class="user-email">{{ user.email }}</p>
+        {% else %}
+            <p class="user-email">User did not provide an e-mail</p>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
