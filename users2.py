@@ -52,4 +52,3 @@ def get_users_comp():
     return users + users_no_mail
 
 
-print(get_users_comp())
