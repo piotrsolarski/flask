@@ -18,3 +18,25 @@ for l in user_list:
     print(l, end="\n")
 
 
+def get_transformed_users():
+    users = []
+    for user in USERS:
+        if user.get('email'):
+            users.append({
+                'first_name': user['first_name'],
+                'last_name': user['last_name'],
+                'email': user['email']
+            })
+        else:
+           users.append({
+               'first_name': user['first_name'],
+               'last_name': user['last_name'],
+               'email': 'This user did not provide e-mail'
+           })
+    return users
+
+def get_users_comp():
+    users_comp = 
+    print(users_comp)
+print(get_users_comp())
+

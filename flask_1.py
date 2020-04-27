@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 from constants import POSTS, USERS
+from users2 import get_transformed_users
 
 app = Flask(__name__)
 
@@ -17,7 +18,8 @@ def about():
 
 @app.route('/users')
 def users():
-    return render_template('users.html', title='Users', users=USERS)
+    users_py = get_transformed_users()
+    return render_template('users.html', title='Users', users=users_py)
 
 
 if __name__ == '__main__':
