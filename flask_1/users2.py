@@ -38,17 +38,20 @@ from flask_1.constants import USERS
 #     return users
 
 def get_users_comp():
-    users = [({
+    users = [{
         'first_name': user['first_name'],
         'last_name': user['last_name'],
         'email': user['email']
-    }) for user in USERS if user.get('email')]
-    users_no_mail = [({
+    } if user.get('email') else {
         'first_name': user['first_name'],
         'last_name': user['last_name'],
         'email': 'This user did not provide an e-mail'
-    }) for user in USERS if not user.get('email')]
+    } for user in USERS ]
+    # users_no_mail = [{
+    #     'first_name': user['first_name'],
+    #     'last_name': user['last_name'],
+    #     'email': 'This user did not provide an e-mail'
+    # } for user in USERS if not user.get('email')]
 
-    return users + users_no_mail
-
+    return users
 
