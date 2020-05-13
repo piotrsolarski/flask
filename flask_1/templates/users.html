@@ -2,13 +2,9 @@
 {% block content %}
     {% for user in users %}
         <strong>
-        <p class="user-name">{{ user.first_name }}</p>
-        <p class="user-name">{{ user.last_name }}</p>
+        <p class="user-name"><img class="rounded-circle account-img" src="static/profile_pics/{{ user.image_file }}">{{ user.id }}. {{ user.username }}</p>
         </strong>
-            {% if user.email %}
-            <p class="user-email">{{ user.email }}</p>
-        {% else %}
-            <p class="user-email">User did not provide an e-mail</p>
-        {% endif %}
+        <p class="user-email">{{ user.email }}</p>
+        <hr>
     {% endfor %}
 {% endblock content %}

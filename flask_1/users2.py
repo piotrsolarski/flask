@@ -1,5 +1,5 @@
 from flask_1.constants import USERS
-
+from flask_1.models import User
 
 # user_list = []
 # for user in range(len(USERS)):
@@ -37,21 +37,28 @@ from flask_1.constants import USERS
 #             })
 #     return users
 
+# def get_users_comp():
+#     users = [{
+#         'first_name': user['first_name'],
+#         'last_name': user['last_name'],
+#         'email': user['email']
+#     } if user.get('email') else {
+#         'first_name': user['first_name'],
+#         'last_name': user['last_name'],
+#         'email': 'This user did not provide an e-mail'
+#     } for user in USERS]
+#
+#     return users
+
+
 def get_users_comp():
     users = [{
-        'first_name': user['first_name'],
-        'last_name': user['last_name'],
-        'email': user['email']
-    } if user.get('email') else {
-        'first_name': user['first_name'],
-        'last_name': user['last_name'],
-        'email': 'This user did not provide an e-mail'
-    } for user in USERS ]
-    # users_no_mail = [{
-    #     'first_name': user['first_name'],
-    #     'last_name': user['last_name'],
-    #     'email': 'This user did not provide an e-mail'
-    # } for user in USERS if not user.get('email')]
+        'id': user.id,
+        'image_file': user.image_file,
+        'username': user.username,
+        'email': user.email
+    } for user in User.query.all()]
 
     return users
+
 
