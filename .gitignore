@@ -22,3 +22,9 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
+
+__pycache__/
+site.db
+flask_1/site.db
+
+
