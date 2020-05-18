@@ -2,7 +2,7 @@
 {% block content %}
     {% for user in users %}
         <strong>
-        <p class="user-name"><img class="rounded-circle account-img" src="static/profile_pics/{{ user.image_file }}">{{ user.id }}. {{ user.username }}</p>
+        <p class="user-name"><img class="rounded-circle article-img" src="static/profile_pics/{{ user.image_file }}">{{ user.id }}. {{ user.username }}</p>
         </strong>
         <p class="user-email">{{ user.email }}</p>
         <hr>

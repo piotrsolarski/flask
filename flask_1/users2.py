@@ -1,4 +1,4 @@
-from flask_1.constants import USERS
+# from flask_1.constants import USERS
 from flask_1.models import User
 
 # user_list = []
